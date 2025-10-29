@@ -8,18 +8,15 @@ services:
     buildCommand: npm install
     startCommand: npx directus start
     envVars:
-      - key: NODE_ENV
-        value: production
+      # ========== General ==========
+      - key: HOST
+        value: 0.0.0.0
       - key: PORT
-        value: 8080
-      - key: ADMIN_EMAIL
-        value: admin@example.com
-      - key: ADMIN_PASSWORD
-        value: 123456
-      - key: KEY
-        value: changeme
-      - key: SECRET
-        value: changeme
+        value: 8055
+      - key: PUBLIC_URL
+        value: https://directus-node.onrender.com
+
+      # ========== Database ==========
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
@@ -32,3 +29,59 @@ services:
         value: directus_db_zpxt_user
       - key: DB_PASSWORD
         value: 8KlFz0QYSjxaQcVexJcyPNTs2Zs1wInT
+      - key: DB_SSL
+        value: "true"
+
+      # ========== Storage ==========
+      - key: STORAGE_LOCATIONS
+        value: local
+      - key: STORAGE_LOCAL_DRIVER
+        value: local
+      - key: STORAGE_LOCAL_ROOT
+        value: ./uploads
+
+      # ========== Security ==========
+      - key: SECRET
+        value: F4ahbK4Y2qft-09eYd8KMp9OLSnZvLQ7
+      - key: ACCESS_TOKEN_TTL
+        value: 15m
+      - key: REFRESH_TOKEN_TTL
+        value: 7d
+      - key: CORS_ENABLED
+        value: "true"
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: CORS_METHODS
+        value: GET,POST,PATCH,DELETE
+      - key: CORS_ALLOWED_HEADERS
+        value: Content-Type,Authorization
+      - key: CORS_EXPOSED_HEADERS
+        value: Content-Range
+      - key: CORS_CREDENTIALS
+        value: "true"
+      - key: CORS_MAX_AGE
+        value: 18000
+
+      # ========== Extensions ==========
+      - key: EXTENSIONS_PATH
+        value: ./extensions
+      - key: EXTENSIONS_AUTO_RELOAD
+        value: "false"
+
+      # ========== Email ==========
+      - key: EMAIL_FROM
+        value: no-reply@example.com
+      - key: EMAIL_TRANSPORT
+        value: sendmail
+      - key: EMAIL_SENDMAIL_NEW_LINE
+        value: unix
+      - key: EMAIL_SENDMAIL_PATH
+        value: /usr/sbin/sendmail
+
+      # ========== Rate Limiting ==========
+      - key: RATE_LIMITER_ENABLED
+        value: "false"
+
+      # ========== Cache ==========
+      - key: CACHE_ENABLED
+        value: "false"
