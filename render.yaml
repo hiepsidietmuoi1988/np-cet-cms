@@ -1,16 +1,34 @@
 services:
   - type: web
-    name: directus-docker
-    env: docker
+    name: directus-node
+    env: node
     region: singapore
     plan: free
     autoDeploy: true
+    buildCommand: npm install
+    startCommand: npx directus start
     envVars:
-      - key: DATABASE_URL
-        value: postgresql://directus_db_zpxt_user:8KlFz0QYSjxaQcVexJcyPNTs2Zs1wInT@dpg-d40re17gi27c73cujtgg-a.singapore-postgres.render.com/directus_db_zpxt
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
       - key: ADMIN_EMAIL
         value: admin@example.com
       - key: ADMIN_PASSWORD
         value: 123456
-      - key: PORT
-        value: 8080
+      - key: KEY
+        value: changeme
+      - key: SECRET
+        value: changeme
+      - key: DB_CLIENT
+        value: pg
+      - key: DB_HOST
+        value: dpg-d40re17gi27c73cujtgg-a.singapore-postgres.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: directus_db_zpxt
+      - key: DB_USER
+        value: directus_db_zpxt_user
+      - key: DB_PASSWORD
+        value: 8KlFz0QYSjxaQcVexJcyPNTs2Zs1wInT
