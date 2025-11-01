@@ -14,7 +14,7 @@ services:
       - key: PORT
         value: 8055
       - key: PUBLIC_URL
-        value: https://directus-node.onrender.com
+        value: /
 
       # ========== Database ==========
       - key: DB_CLIENT
