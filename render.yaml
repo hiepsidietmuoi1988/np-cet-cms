@@ -41,6 +41,8 @@ services:
       #   value: ./uploads
 
       # ========== Storage cloudinary ==========
+      - key: STORAGE_LOCATIONS
+        value: cloudinary
       - key: STORAGE_CLOUDINARY_DRIVER
         value: cloudinary
       - key: STORAGE_CLOUDINARY_CLOUD_NAME
