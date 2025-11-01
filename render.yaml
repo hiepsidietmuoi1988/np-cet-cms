@@ -48,7 +48,7 @@ services:
       - key: REFRESH_TOKEN_TTL
         value: 7d
       - key: CORS_ENABLED
-        value: "true"
+        value: true
       - key: CORS_ORIGIN
         value: "*"
       - key: CORS_METHODS
@@ -58,7 +58,7 @@ services:
       - key: CORS_EXPOSED_HEADERS
         value: Content-Range
       - key: CORS_CREDENTIALS
-        value: "true"
+        value: true
       - key: CORS_MAX_AGE
         value: 18000
 
