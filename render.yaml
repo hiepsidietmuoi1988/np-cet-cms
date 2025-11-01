@@ -33,12 +33,24 @@ services:
         value: true
 
       # ========== Storage ==========
-      - key: STORAGE_LOCATIONS
-        value: local
-      - key: STORAGE_LOCAL_DRIVER
-        value: local
-      - key: STORAGE_LOCAL_ROOT
-        value: ./uploads
+      # - key: STORAGE_LOCATIONS
+      #   value: local
+      # - key: STORAGE_LOCAL_DRIVER
+      #   value: local
+      # - key: STORAGE_LOCAL_ROOT
+      #   value: ./uploads
+
+      # ========== Storage cloudinary ==========
+      - key: STORAGE_CLOUDINARY_DRIVER
+        value: cloudinary
+      - key: STORAGE_CLOUDINARY_CLOUD_NAME
+        value: do9yizyje
+      - key: STORAGE_CLOUDINARY_API_KEY
+        value: 658379322435491
+      - key: STORAGE_CLOUDINARY_API_SECRET
+        value: bEU4lv0bjK3_PSVlSdKWpswMm4k
+      - key: STORAGE_CLOUDINARY_ACCESS_MODE
+        value: authenticated
 
       # ========== Security ==========
       - key: SECRET
