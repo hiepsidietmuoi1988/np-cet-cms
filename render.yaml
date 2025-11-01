@@ -20,15 +20,15 @@ services:
       - key: DB_CLIENT
         value: pg
       - key: DB_HOST
-        value: dpg-d40re17gi27c73cujtgg-a.singapore-postgres.render.com
+        value: ep-round-brook-a187zj3m-pooler.ap-southeast-1.aws.neon.tech
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: directus_db_zpxt
+        value: directus-db
       - key: DB_USER
-        value: directus_db_zpxt_user
+        value: neondb_owner
       - key: DB_PASSWORD
-        value: 8KlFz0QYSjxaQcVexJcyPNTs2Zs1wInT
+        value: npg_Vk0QyMXU6gjP
       - key: DB_SSL
         value: "true"
 
