@@ -30,7 +30,7 @@ services:
       - key: DB_PASSWORD
         value: npg_Vk0QyMXU6gjP
       - key: DB_SSL
-        value: "true"
+        value: true
 
       # ========== Storage ==========
       - key: STORAGE_LOCATIONS
