@@ -24,7 +24,7 @@ services:
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: directus_db
+        value: directus_db2
       - key: DB_USER
         value: neondb_owner
       - key: DB_PASSWORD
