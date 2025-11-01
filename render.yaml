@@ -9,6 +9,8 @@ services:
     startCommand: npx directus start
     envVars:
       # ========== General ==========
+      - key: HOST
+        value: 0.0.0.0
       - key: PORT
         value: 8055
       - key: PUBLIC_URL
